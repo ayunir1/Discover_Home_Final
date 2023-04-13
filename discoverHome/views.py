@@ -82,4 +82,7 @@ def updateprofile(request):
         return HttpResponseBadRequest('Invalid request')
     # some error occured
     return JsonResponse({"error": ""}, status=400)
+
+def profile_home(request) :
+    return render(request, 'profile_home.html', {})
     
