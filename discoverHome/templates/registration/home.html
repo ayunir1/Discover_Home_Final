@@ -225,8 +225,7 @@
                   class="form-select"
                   aria-label="Default select example"
                   id="city"
-                  onchange="selectCity()"
-                >
+                  onchange="selectCity()">
                   <option selected>Select city</option>
                   {% if mail != "" %}
                   <option value="MyLocation">MyLocation</option>
@@ -242,9 +241,46 @@
               </div>
             </div>
 
+          <div class="col-12">
+              <label for="inputAddress" class="form-label">&#160 Departure (Location)</label>
+              <img id="formHide" onclick="hide_form()" src="{% static "media/arrow-left.png" %}" style="width: 40px;height:
+              40px;position: absolute;margin-left: 70%;"> <img id="formShow"
+              onclick="show_form()" src="{% static "media/arrow-right.png" %}"
+              style=" visibility: hidden; width: 40px;height: 40px;position:
+              absolute;margin-left: -90px;">
+              <input
+                type="text"
+                class="form-control"
+                id="inputAddress"
+                placeholder="Apartment, studio, or floor"
+              />
+            </div>
+            <div class="col-12">
+              <label for="inputAddress2" class="form-label">&#160 Destination (Location)</label>
+              <input
+                type="text"
+                class="form-control"
+                id="inputAddress2"
+                placeholder="Apartment, studio, or floor"
+              />
+            </div>
+          <br />
+            <div class="col-12 row form_layout">
+              <label for="inputAddress" class="col-md-3 form-label">Date</label>
+              <div class="col-md-9">
+                <input type="date" class="form-control" id="date" />
+              </div>
+            </div>
+            <div class="col-12 row form_layout">
+              <label for="inputAddress" class="col-md-3 form-label">Time</label>
+              <div class="col-md-9">
+                <input type="time" class="form-control" id="time" />
+              </div>
+                <br />
+                <br />
             <div class="col-12 row form_layout">
               <label for="Proximity" class="col-md-4 form-label"
-                >Proximity (miles)</label
+                >Filter Radius</label
               >
               <div class="col-md-8">
                 <select class="form-select" aria-label="Default select example">
@@ -271,48 +307,14 @@
               </div>
             </div>
 
-            <div class="col-12">
-              <label for="inputAddress" class="form-label">Departure</label>
-              <img id="formHide" onclick="hide_form()" src="{% static "media/arrow-left.png" %}" style="width: 40px;height:
-              40px;position: absolute;margin-left: 70%;"> <img id="formShow"
-              onclick="show_form()" src="{% static "media/arrow-right.png" %}"
-              style=" visibility: hidden; width: 40px;height: 40px;position:
-              absolute;margin-left: -90px;">
-              <input
-                type="text"
-                class="form-control"
-                id="inputAddress"
-                placeholder="Apartment, studio, or floor"
-              />
-            </div>
-            <div class="col-12">
-              <label for="inputAddress2" class="form-label">Destination</label>
-              <input
-                type="text"
-                class="form-control"
-                id="inputAddress2"
-                placeholder="Apartment, studio, or floor"
-              />
-            </div>
+
             <div class="col-12">
               <label for="inputCity" class="form-label"
-                >Event or Activity</label
-              >
+                ></label>
             </div>
-            <div class="col-12 row form_layout">
-              <label for="inputAddress" class="col-md-3 form-label">Date</label>
-              <div class="col-md-9">
-                <input type="date" class="form-control" id="date" />
-              </div>
-            </div>
-            <div class="col-12 row form_layout">
-              <label for="inputAddress" class="col-md-3 form-label">Time</label>
-              <div class="col-md-9">
-                <input type="time" class="form-control" id="time" />
-              </div>
+
               <br />
-              <br />
-              <button id='open' type="button">Open Filter Menu</button>
+              <button id='open' type="button">Search By Event or Activity Type</button>
             </div>
           </div>
         </form>
@@ -346,10 +348,10 @@
               <label for='park' class="col-md-10 form-label">Park</label>
             </div>
             <div class="col-12 row form_layout">
-              <div class="col-md-1">
-                <input type="radio" onchange='change(event)' value='hospital' name='type' id='hospital' />
-              </div>
-              <label for='hospital' class="col-md-10 form-label">Hospital</label>
+            <div onClick="window.location = 'concert';">
+                <input type="radio" style="pointer-events:none;">
+              <label for='hospital' class="col-md-10 form-label">&#160 Concert</label>
+            </div>
             </div>
             <div class="col-12 row form_layout">
               <div class="col-md-1">

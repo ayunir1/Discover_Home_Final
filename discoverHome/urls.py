@@ -11,6 +11,7 @@ urlpatterns = [
     path('logout/', views.logout, name = 'logout' ),
     path('profile/', views.profile, name = 'profile' ),
     path('profile_home/', views.profile_home, name="profile_home"),
+    path('concert/', views.concert, name="concert"),
 
     # api config
     

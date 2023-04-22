@@ -86,4 +86,7 @@ def updateprofile(request):
 def profile_home(request) :
     return render(request, 'profile_home.html', {})
 
+def concert(request) :
+    return render(request, 'concert.html', {})
+
     
